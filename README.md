@@ -53,4 +53,41 @@ Abaixo, seguem links bem bacanas, sobre tópicos mencionados durante a aula:
 [Neste link](https://drive.google.com/file/d/1KPh19mvyKirorOI-UsEYHKkmZpet3Ks6/view?usp=sharing), seguem os slides apresentados como o roteiro utilizado para o desenvolvimento do projeto da nossa sessão.
 
 
+# Beer Stock API - Digital Innovation One
 
+## 👨‍💻 Desenvolvido por: Fabrício José
+
+### 🍺 Sobre o Projeto
+Este projeto foi desenvolvido durante a Expert Class da DIO, focada no desenvolvimento de testes unitários para validar uma API REST de gerenciamento de estoques de cerveja.
+
+### 🚀 Meus Desafios e Superações
+Durante a execução deste projeto, enfrentei e resolvi os seguintes desafios técnicos para garantir que a aplicação rodasse em um ambiente moderno:
+
+1. **Migração para Java 17**: Atualizei o projeto original (que usava versões anteriores) para o JDK 17, ajustando as propriedades do Maven.
+2. **Correção de Dependências (POM.xml)**: Resolvi erros críticos de sintaxe XML e conflitos de versões de bibliotecas como Lombok e MapStruct.
+3. **Incompatibilidade do Swagger**: Identifiquei e resolvi um erro de compilação causado pela biblioteca Springfox (Swagger), que é incompatível com o `Predicate` do Java moderno. Optei por remover a dependência para priorizar um Build estável e funcional.
+4. **Refatoração de Interfaces**: Limpei as anotações legadas da interface `BeerControllerDocs`, garantindo que o projeto compilasse sem erros de pacotes inexistentes.
+5. **Garantia de Testes (TDD)**: Executei com sucesso a suíte de 13 testes unitários para garantir a integridade das regras de negócio (incremento, decremento e estoque máximo).
+
+### 🛠️ Tecnologias Utilizadas
+* Java 17 / Spring Boot 2.7.18
+* Maven (Build Tool)
+* JUnit 5 / Mockito / Hamcrest (Testes)
+* Banco de Dados H2 (Em memória)
+
+---
+
+### 📋 Como Executar o Projeto
+1. **Compilar e limpar:**
+   ```bash
+   ./mvnw clean compile -DskipTests
+
+2. **Executar a API:**
+   ```bash
+   ./mvnw spring-boot:run -DskipTests
+
+3. **Rodar os Testes:**
+   ```bash
+   ./mvnw clean test
+
+A API estará disponível em: http://localhost:8080/api/v1/beers
